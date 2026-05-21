@@ -217,4 +217,66 @@ Es wird ein einfaches desing mit klaren Anzeigen verwendet.
 
 ---
 
+## Eintrag 10 - UserCaseDiagramm
 
+**Datum:** 21.05.2026 
+
+**Aufgabe:** UserCaseDiagramm erstellen.
+
+**Beschreibung:** Usercase zeigt die Interaktion eines Benutzers mit der App. Es gibt 3 Use Cases: VPN-Verbindung starten, VPN-Verbindung trennen und Serverstandort auswählen.
+
+**Ergebnis:** Das UseCaseDiagramm wurde erstellt und im Ordner Documentation gespeichert.
+
+**Probleme:** Es war unklar, wie die Interaktion genau aussehen soll.
+
+**Lösung:** Es wurden einfache Use Cases definiert, die die wichtigsten Funktionen der App abdecken.
+
+---
+
+## Eintrag 11 - AktivitätenDiagramm
+
+**Datum:** 21.05.2026
+
+**Aufgabe:** AktivitätenDiagramm erstellen.
+
+**Beschreibung:** Das AktivitätenDiagramm zeigt den Ablauf der VPN-Verbindung. Es beginnt mit dem Starten der App, dann kann der Benutzer die VPN-Verbindung starten oder trennen und den Serverstandort auswählen.
+
+**Ergebnis:** Das AktivitätenDiagramm wurde erstellt und im Ordner Documentation gespeichert.
+
+**Probleme:** Es war unklar, wie die Abläufe genau aussehen sollen. 
+
+**Lösung:** Es wurden einfache Abläufe definiert, die die wichtigsten Funktionen der App abdecken.  
+
+---
+
+## Eintrag 12 - Klassendiagramm
+
+**Datum:** 21.05.2026
+
+**Aufgabe:** Klassendiagramm erstellen.
+
+**Beschreibung:** Das Klassendiagramm zeigt die wichtigsten Klassen der App. Es gibt eine MainWindow-Klasse für die Benutzeroberfläche, eine VPNService-Klasse für die Logik der VPN-Verbindung, Settings-Klasse für App-Einstellungen,ConnectionStatus-Klasse und eine ServerLocation-Klasse für die Serverstandorte.
+
+**Ergebnis:** Das Klassendiagramm wurde erstellt und im Ordner Documentation gespeichert.
+
+**Probleme:** Es war unklar, welche Klassen genau benötigt werden.
+
+**Lösung:** Es wurden die wichtigsten Klassen definiert, die für die Umsetzung der App notwendig sind.
+
+---
+
+## Eintrag 13 - Mockup der Benutzeroberfläche
+
+**Datum:** 22.05.2026
+
+**Aufgabe:** Mockup der Benutzeroberfläche erstellen.
+
+**Beschreibung:** Es wurde ein Mockup der Benutzeroberfläche erstellt. Das Mockup zeigt die Zugangseite,Startseite,Connectionseite und Einstellungsseite.
+
+**Ergebnis:** Das Mockup wurde erstellt und im Ordner Documentation gespeichert.
+
+**Probleme:** Es war unklar, wie viel die Benutzeroberfläche ich möchte erstellen.
+
+**Lösung:** Es wurde entschieden, ein einfaches Mockup zu erstellen, das die wichtigsten Elemente der Benutzeroberfläche zeigt.
+
+---
