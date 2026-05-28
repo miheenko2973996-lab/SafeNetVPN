@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SafeNetVPN.Pages.SettingsPage"
+             BackgroundColor="#FFF5F8">
+
+    <Grid RowDefinitions="Auto,*,Auto">
+
+        <!-- Kopfbereich -->
+        <VerticalStackLayout Grid.Row="0"
+                             BackgroundColor="#FFD6DF"
+                             Padding="15"
+                             Spacing="11">
+
+            <Label Text="SafeNetVPN"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   HorizontalOptions="Center"
+                   TextColor="Black" />
+
+            <Label Text="Sicher. Einfach. Schnell"
+                   FontSize="16"
+                   HorizontalOptions="Center"
+                   TextColor="Black" />
+
+        </VerticalStackLayout>
+
+        <!-- Inhalt -->
+        <VerticalStackLayout Grid.Row="1"
+                             Padding="20"
+                             Spacing="45">
+
+            <Label Text="Einstellungen :"
+                   FontSize="24"
+                   FontAttributes="Bold"
+                   TextColor="#B0005A"
+                   HorizontalOptions="Center"
+                   Margin="0,40,0,25" />
+
+            <!-- Einstellungen Grid -->
+            <Grid RowDefinitions="45,45,45,45"
+                  ColumnDefinitions="150,150"
+                  RowSpacing="18"
+                  ColumnSpacing="40"
+                  HorizontalOptions="Start">
+
+                <!-- Sprache -->
+                <Label Grid.Row="0"
+                       Grid.Column="0"
+                       Text="Sprache"
+                       FontSize="17"
+                       TextColor="Black"
+                       VerticalOptions="Center" />
+
+                <Picker Grid.Row="0"
+                        Grid.Column="1"
+                        Title="Deutsch"
+                        WidthRequest="215"
+                        HeightRequest="35"
+                        FontSize="16">
+                    <Picker.Items>
+                        <x:String>Deutsch</x:String>
+                        <x:String>Englisch</x:String>
+                        <x:String>Ukrainisch</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <!-- Standardserver -->
+                <Label Grid.Row="1"
+                       Grid.Column="0"
+                       Text="Standartserver"
+                       FontSize="17"
+                       TextColor="Black"
+                       VerticalOptions="Center" />
+
+                <Picker x:Name="DefaultServerPicker"
+                        Grid.Row="1"
+                        Grid.Column="1"
+                        Title="Deutschland - Frankfurt"
+                        WidthRequest="215"
+                        HeightRequest="35"
+                        FontSize="16">
+                    <Picker.Items>
+                        <x:String>Deutschland - Frankfurt</x:String>
+                        <x:String>USA - New York</x:String>
+                        <x:String>Polen - Warschau</x:String>
+                        <x:String>Ukraine - Kyiv</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <!-- Automatisch verbinden -->
+                <Label Grid.Row="2"
+                       Grid.Column="0"
+                       Text="Automatisch verbinden"
+                       FontSize="17"
+                       TextColor="Black"
+                       VerticalOptions="Center" />
+
+                <Picker Grid.Row="2"
+                        Grid.Column="1"
+                        Title="Ja"
+                        WidthRequest="215"
+                        HeightRequest="35"
+                        FontSize="16">
+                    <Picker.Items>
+                        <x:String>Ja</x:String>
+                        <x:String>Nein</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <!-- Benachrichtigungen -->
+                <Label Grid.Row="3"
+                       Grid.Column="0"
+                       Text="Benachrichtigungen"
+                       FontSize="17"
+                       TextColor="Black"
+                       VerticalOptions="Center" />
+
+                <Picker Grid.Row="3"
+                        Grid.Column="1"
+                        Title="Erlauben"
+                        WidthRequest="215"
+                        HeightRequest="35"
+                        FontSize="16">
+                    <Picker.Items>
+                        <x:String>Erlauben</x:String>
+                        <x:String>Nicht erlauben</x:String>
+                    </Picker.Items>
+                </Picker>
+
+            </Grid>
+
+            <!-- Speichern Button -->
+            <Button Text="Einstellungen speichern"
+                    BackgroundColor="#D0006F"
+                    TextColor="White"
+                    FontAttributes="Bold"
+                    CornerRadius="10"
+                    WidthRequest="250"
+                    HeightRequest="50"
+                    HorizontalOptions="Center"
+                    Margin="0,50,0,0"
+                    Clicked="SaveSettingsButton_Clicked"/>
+
+        </VerticalStackLayout>
+
+
+        <!-- Menü unten -->
+        <HorizontalStackLayout Grid.Row="2"
+                               HorizontalOptions="Start"
+                               BackgroundColor="#FFD6DF"
+                               Padding="20,25"
+                               Spacing="20">
+
+            <Button Text="Startseite"
+                    BackgroundColor="#D0006F"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Clicked="GoToMainPage_Clicked" />
+
+            <Button Text="Server"
+                    BackgroundColor="#D0006F"
+                    TextColor="White"
+                    CornerRadius="10" 
+                    Clicked="GoToServerPage_Clicked" />
+
+            <Button Text="Einstellungen"
+                    BackgroundColor="#D0006F"
+                    TextColor="White"
+                    CornerRadius="10"
+                    Clicked="GoToSettingsPage_Clicked" />
+
+        </HorizontalStackLayout>
+
+    </Grid>
+
+</ContentPage>

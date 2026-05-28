@@ -280,3 +280,48 @@ Es wird ein einfaches desing mit klaren Anzeigen verwendet.
 **Lösung:** Es wurde entschieden, ein einfaches Mockup zu erstellen, das die wichtigsten Elemente der Benutzeroberfläche zeigt.
 
 ---
+
+## Eintrag 14 - Die Benutzeroberflächen umsetzen
+
+**Datum:** 26.052026
+
+**Aufgabe:** Die Benutzeroberflächen: Login, Main, Server, Einstellungen umsetzen.
+
+**Beschreibung:** Es wurden die Benutzeroberflächen für die Loginseite, Mainseite, Serverseite und Einstellungsseite umgesetzt. Die Seiten wurden mit Buttons, Labels Grids anderen Steuerelementen gestaltet.
+
+**Ergebnis:** Die Benutzeroberflächen wurden erfolgreich umgesetzt. Die Seiten sind in der Pages-Ordner zu finden.
+
+**Probleme:** Es war unklar, wie die Seiten genau aussehen sollen.
+
+**Lösung:** Es wurde entschieden, die Seiten einfach und übersichtlich zu gestalten, damit sie benutzerfreundlich sind.
+
+---
+
+## Eintrag 15 – Programmierung der Benutzeroberfläche
+
+**Datum:** 27.05.2026 - 28.05.2026
+
+**Aufgabe:** Die Benutzeroberflächen der App weiter programmieren und Funktionen hinzufügen.
+
+**Beschreibung:**  
+Heute wurden wichtige Teile der SafeNetVPN-App programmiert. Die Startseite wurde mit Logik erweitert: Der Button „Verbinden“ ändert den Status, die Farbe des Kreises, die IP-Adresse und den Verbindungstext. Außerdem wurde die Navigation zwischen Anmeldung, Startseite und Einstellungen umgesetzt.
+
+Auf der Einstellungsseite wurde der Standardserver gespeichert. Wenn der Benutzer später auf der Startseite den Button „Server“ drückt, wird der gespeicherte Standardserver geladen.
+
+**Wichtige Entscheidung:**  
+Die separate ServerPage wurde nicht mehr weiter benutzt, weil die Serverauswahl bereits auf der Startseite funktioniert. Dadurch ist die App einfacher und übersichtlicher. Die ServerPage wurde aus der Navigation entfernt.
+
+**Probleme:**  
+Es gab mehrere Fehler durch alte Template-Dateien und alte Projektbestandteile. Diese Dateien wurden aus dem Projekt ausgeschlossen oder bereinigt.
+
+**Lösung:**  
+Die App wurde vereinfacht. Es bleiben nur die wichtigen Seiten: Anmeldung, Startseite und Einstellungen.
+
+**Ergebnis:**  
+Die App funktioniert jetzt besser. Der Benutzer kann sich anmelden, den VPN-Status ändern, einen Server auswählen und einen Standardserver speichern.
+
+---
+
+
+
+

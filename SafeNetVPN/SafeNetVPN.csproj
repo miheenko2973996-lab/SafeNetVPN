@@ -61,6 +61,55 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <AndroidResource Remove="Data\**" />
+	  <AndroidResource Remove="Models\**" />
+	  <AndroidResource Remove="PageModels\**" />
+	  <AndroidResource Remove="Pages\Controls\**" />
+	  <AndroidResource Remove="Utilities\**" />
+	  <Compile Remove="Data\**" />
+	  <Compile Remove="Models\**" />
+	  <Compile Remove="PageModels\**" />
+	  <Compile Remove="Pages\Controls\**" />
+	  <Compile Remove="Utilities\**" />
+	  <EmbeddedResource Remove="Data\**" />
+	  <EmbeddedResource Remove="Models\**" />
+	  <EmbeddedResource Remove="PageModels\**" />
+	  <EmbeddedResource Remove="Pages\Controls\**" />
+	  <EmbeddedResource Remove="Utilities\**" />
+	  <MauiCss Remove="Data\**" />
+	  <MauiCss Remove="Models\**" />
+	  <MauiCss Remove="PageModels\**" />
+	  <MauiCss Remove="Pages\Controls\**" />
+	  <MauiCss Remove="Utilities\**" />
+	  <MauiXaml Remove="Data\**" />
+	  <MauiXaml Remove="Models\**" />
+	  <MauiXaml Remove="PageModels\**" />
+	  <MauiXaml Remove="Pages\Controls\**" />
+	  <MauiXaml Remove="Utilities\**" />
+	  <None Remove="Data\**" />
+	  <None Remove="Models\**" />
+	  <None Remove="PageModels\**" />
+	  <None Remove="Pages\Controls\**" />
+	  <None Remove="Utilities\**" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <Compile Remove="GlobalUsings.cs" />
+	  <Compile Remove="Pages\ManageMetaPage.xaml.cs" />
+	  <Compile Remove="Pages\ProjectDetailPage.xaml.cs" />
+	  <Compile Remove="Pages\ProjectListPage.xaml.cs" />
+	  <Compile Remove="Pages\TaskDetailPage.xaml.cs" />
+	  <Compile Remove="Services\ModalErrorHandler.cs" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Remove="Pages\ManageMetaPage.xaml" />
+	  <MauiXaml Remove="Pages\ProjectDetailPage.xaml" />
+	  <MauiXaml Remove="Pages\ProjectListPage.xaml" />
+	  <MauiXaml Remove="Pages\TaskDetailPage.xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="9.0.8" />
 	</ItemGroup>
@@ -71,6 +120,18 @@
 		<PackageReference Include="Microsoft.Data.Sqlite.Core" Version="8.0.8" />
 		<PackageReference Include="SQLitePCLRaw.bundle_green" Version="2.1.10" />
 		<PackageReference Include="Syncfusion.Maui.Toolkit" Version="1.0.6" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <MauiXaml Update="Pages\LoginPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\ServerPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Pages\SettingsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	</ItemGroup>
 	
 </Project>

@@ -1,8 +1,8 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
+<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:shapes="clr-namespace:Microsoft.Maui.Controls.Shapes;assembly=Microsoft.Maui.Controls"
-             x:Class="SafeNetVPN.Pages.MainPage"
+             x:Class="SafeNetVPN.Pages.ServerPage"
              BackgroundColor="#FFF5F8">
 
     <VerticalStackLayout Padding="0" Spacing="58">
@@ -26,32 +26,29 @@
         </VerticalStackLayout>
 
         <!-- Status -->
-        <Label x:Name="StatusLabel"
-               Text="Status: Nicht verbunden"
+        <Label Text="Status: Verbunden"
                FontSize="18"
                HorizontalOptions="Center"
                TextColor="Black" />
 
         <!-- Kreis als Verbindungsanzeige -->
-        <shapes:Ellipse x:Name="StatusCircle"
-                WidthRequest="90"
+        <shapes:Ellipse WidthRequest="90"
                 HeightRequest="90"
-                Fill="#B00020"
-                Stroke="#B00020"
+                Fill="#008000"
+                Stroke="#008000"
                 HorizontalOptions="Center" />
 
         <!-- Verbinden Button -->
-        <Button x:Name="ConnectButton"
-                Text="Verbinden"
+        <Button Text="Trennen"
                 BackgroundColor="#D0006F"
                 TextColor="White"
                 FontAttributes="Bold"
                 CornerRadius="10"
                 WidthRequest="160"
                 HorizontalOptions="Center"
-                Clicked="ConnectButton_Clicked" />
+                Clicked="DisconnectButton_Clicked" />
 
-        <!-- Server, IP-Adresse und Verbindung wie im Mockup -->
+        <!-- Server, IP-Adresse und Verbindung -->
         <Grid RowDefinitions="Auto,Auto,Auto"
       ColumnDefinitions="150,215"
       RowSpacing="10"
@@ -63,18 +60,19 @@
             <Label Grid.Row="0"
            Grid.Column="0"
            Text="Server auswählen :"
-           FontSize="18"
+           FontSize="16"
            TextColor="Black"
            VerticalOptions="Center" />
 
-            <Picker x:Name="ServerPicker" 
-            Grid.Row="0"
+            <Picker x:Name="ServerPagePicker"
+                    Grid.Row="0"
             Grid.Column="1"
             Title="Deutschland - Frankfurt"
             WidthRequest="215"
             HeightRequest="35"
-             FontSize="16"
-            VerticalOptions="Center">
+            FontSize="16"
+            VerticalOptions="Center"
+            SelectedIndexChanged="ServerPagePicker_SelectedIndexChanged">
                 
                 <Picker.Items>
                     <x:String>Deutschland - Frankfurt</x:String>
@@ -92,39 +90,43 @@
            TextColor="Black"
            VerticalOptions="Center" />
 
-            <Entry x:Name="IpEntry" 
+            <Entry x:Name="ServerPageIpEntry"
            Grid.Row="1"
            Grid.Column="1"
            WidthRequest="215"
            HeightRequest="35"
-           FontSize="16"
+           FontSize="18"
+           Text="192.168.1.10"
            IsReadOnly="True"
            BackgroundColor="White"
-           TextColor="Black" 
-                          HorizontalTextAlignment="Start" />
+           TextColor="Black"
+                   HorizontalTextAlignment="Start"/>
+
 
             <!-- Verbindung -->
-            <Label Grid.Row="2"
+            <Label 
+           Grid.Row="2"
            Grid.Column="0"
            Text="Verbindung :"
-           FontSize="18"
+           FontSize="16"
            TextColor="Black"
            VerticalOptions="Center" />
 
-            <Entry x:Name="ConnectionEntry"
-                Grid.Row="2"
+            <Entry x:Name="ServerPageConnectionEntry"
+           Grid.Row="2"
            Grid.Column="1"
+           Text="Verschlüsselt"
            WidthRequest="215"
            HeightRequest="35"
-           FontSize="16"
+           FontSize="18"
            IsReadOnly="True"
            BackgroundColor="White"
-           TextColor="Black" 
-                          HorizontalTextAlignment="Start" />
+           TextColor="Black"
+           HorizontalTextAlignment="Start" />
 
         </Grid>
         <!-- Menü unten -->
-        
+
         <HorizontalStackLayout HorizontalOptions="Start" 
                                    BackgroundColor="#FFD6DF"
                                    Padding="20,25"
@@ -133,22 +135,22 @@
             <Button Text="Startseite"
                     BackgroundColor="#D0006F"
                     TextColor="White"
-                    CornerRadius="10"
-                    Clicked="GoToMainPage_Clicked"/>
+                    CornerRadius="10" 
+                    Clicked="GoToMainPage_Clicked" />
 
             <Button Text="Server"
                     BackgroundColor="#D0006F"
                     TextColor="White"
-                    CornerRadius="10" 
-                    Clicked="GoToServerPage_Clicked"/>
+                    CornerRadius="10"
+                    Clicked="GoToServerPage_Clicked" />
 
             <Button Text="Einstellungen"
                     BackgroundColor="#D0006F"
                     TextColor="White"
                     CornerRadius="10"
-                    Clicked="GoToSettingsPage_Clicked"/>
-            
-            </HorizontalStackLayout>    
+                    Clicked="GoToSettingsPage_Clicked" />
+
+        </HorizontalStackLayout>
 
     </VerticalStackLayout   >
 
