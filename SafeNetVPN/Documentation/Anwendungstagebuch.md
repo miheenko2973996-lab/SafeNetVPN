@@ -322,6 +322,69 @@ Die App funktioniert jetzt besser. Der Benutzer kann sich anmelden, den VPN-Stat
 
 ---
 
+## Eintrag 16 – Verbesserung der Benutzerfreundlichkeit
 
+**Datum:** 29.05.2026
 
+**Aufgabe:** Funktionen für Wartezeit, Meldungen und Warnsymbol hinzufügen.
 
+**Beschreibung:**  
+Heute wurden weitere Verbesserungen in die SafeNetVPN-App eingebaut. Beim Verbinden und Trennen wurde eine kurze Wartezeit ergänzt, damit der Vorgang realistischer wirkt und der Benutzer besser versteht, dass die App gerade arbeitet.
+
+Außerdem wurden Meldungen hinzugefügt. Wenn der Benutzer während einer aktiven Verbindung einen anderen Server auswählen möchte, bekommt er eine klare Nachricht. Die App zeigt dann, dass zuerst die alte Verbindung getrennt werden muss, bevor ein neuer Server gewählt werden kann.
+
+Zusätzlich wurde ein gelbes Kreuz beziehungsweise Warnsymbol eingebaut. Dieses Symbol macht die Warnung sichtbarer und hilft dem Benutzer, die Situation schneller zu verstehen.
+
+**Probleme:**  
+Ohne Meldung war nicht sofort klar, warum der Server während einer aktiven Verbindung nicht direkt gewechselt werden kann.
+
+**Lösung:**  
+Es wurden Wartezeiten, Benutzer-Meldungen und ein gelbes Warnsymbol ergänzt. Dadurch bekommt der Benutzer eine bessere Rückmeldung über den aktuellen Zustand der App.
+
+**Ergebnis:**  
+Die App ist jetzt verständlicher und benutzerfreundlicher. Der Benutzer sieht klarer, wann die App verbindet oder trennt und warum bei einer aktiven Verbindung zuerst getrennt werden muss.
+
+---
+
+## Eintrag 17 – Testen der App
+
+**Datum:** 01.06.2026
+
+**Aufgabe:** Die wichtigsten Funktionen der SafeNetVPN-App testen und die Ergebnisse beschreiben.
+
+**Beschreibung:**  
+Heute wurden die Hauptfunktionen der App getestet. Dazu gehörten der App-Start, die Anmeldung, das Verbinden und Trennen der VPN-Simulation, die Serverauswahl und das Speichern eines Standardservers. Außerdem wurden die neuen Benutzerhinweise mit Wartezeit, Meldungen und gelbem Warnsymbol geprüft.
+
+**Probleme:**  
+Es musste geprüft werden, ob der Benutzer während einer aktiven Verbindung den Server wechseln kann. Dabei sollte die App nicht direkt den Server ändern, sondern eine klare Meldung anzeigen.
+
+**Lösung:**  
+Für jede wichtige Funktion wurde ein Testfall erstellt. Dabei wurde überprüft, welches Ergebnis erwartet wird und ob die App dieses Ergebnis wirklich zeigt.
+
+**Ergebnis:**  
+Alle wichtigen Funktionen wurden erfolgreich getestet. Die App startet korrekt, die Verbindung kann simuliert werden, der Server kann ausgewählt werden und die Einstellungen werden gespeichert. Die Meldung „Trenne zuerst alte Verbindung“ funktioniert ebenfalls. Dadurch ist die App stabiler und verständlicher für den Benutzer.
+
+---
+
+---
+
+## Eintrag 18 – Use-Case-Beschreibung ergänzen
+
+**Datum:** 01.06.2026
+
+**Aufgabe:**  
+Die Use Cases der SafeNetVPN-App beschreiben und die Dokumentation ergänzen.
+
+**Beschreibung:**  
+Heute wurde die Use-Case-Beschreibung für die SafeNetVPN-App ergänzt. Das Use-Case-Diagramm zeigt bereits, welche Funktionen der Benutzer in der App verwenden kann. Zusätzlich wurden die einzelnen Use Cases schriftlich erklärt, damit die Funktionen besser verständlich sind.
+
+Beschrieben wurden zum Beispiel die Anmeldung, das Verbinden und Trennen der VPN-Simulation, die Serverauswahl, das Speichern eines Standardservers und die Meldung beim Serverwechsel während einer aktiven Verbindung.
+
+**Probleme:**  
+Das Use-Case-Diagramm allein zeigt nur kurz die Funktionen. Ohne Beschreibung ist nicht immer klar, wie der genaue Ablauf für den Benutzer ist.
+
+**Lösung:**  
+Zu jedem wichtigen Use Case wurde eine kurze Beschreibung erstellt. Dabei wurden der Ablauf und das Ergebnis beschrieben.
+
+**Ergebnis:**  
+Die Dokumentation ist jetzt vollständiger. Der Leser kann besser verstehen, welche Funktionen die App hat und wie der Benutzer mit der App arbeitet.

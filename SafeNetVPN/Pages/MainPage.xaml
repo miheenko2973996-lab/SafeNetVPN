@@ -67,7 +67,8 @@
            TextColor="Black"
            VerticalOptions="Center" />
 
-            <Picker x:Name="ServerPicker" 
+            <Picker x:Name="ServerPicker"
+                    SelectedIndexChanged="ServerPicker_SelectedIndexChanged"
             Grid.Row="0"
             Grid.Column="1"
             Title="Deutschland - Frankfurt"
@@ -125,27 +126,30 @@
         </Grid>
         <!-- Menü unten -->
         
-        <HorizontalStackLayout HorizontalOptions="Start" 
+        <HorizontalStackLayout HorizontalOptions="Center" 
                                    BackgroundColor="#FFD6DF"
-                                   Padding="20,25"
-                                   Spacing="20">
+                                   Padding="15"
+                                   Spacing="10">
 
             <Button Text="Startseite"
                     BackgroundColor="#D0006F"
                     TextColor="White"
                     CornerRadius="10"
-                    Clicked="GoToMainPage_Clicked"/>
+                    Clicked="GoToMainPage_Clicked" 
+                    FontSize="16"/>
 
-            <Button Text="Server"
+            <Button Text="Standartserver"
                     BackgroundColor="#D0006F"
                     TextColor="White"
                     CornerRadius="10" 
+                    FontSize="16"
                     Clicked="GoToServerPage_Clicked"/>
-
+ 
             <Button Text="Einstellungen"
                     BackgroundColor="#D0006F"
                     TextColor="White"
                     CornerRadius="10"
+                    FontSize="16"
                     Clicked="GoToSettingsPage_Clicked"/>
             
             </HorizontalStackLayout>    

@@ -133,5 +133,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	</ItemGroup>
+
+	<ItemGroup>
+	  <Folder Include="Documentation\Screenshots\" />
+	</ItemGroup>
 	
 </Project>

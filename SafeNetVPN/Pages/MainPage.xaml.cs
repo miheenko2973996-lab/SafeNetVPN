@@ -2,37 +2,54 @@
 
 namespace SafeNetVPN.Pages;
 
-public partial class MainPage : ContentPage
-{
+    public partial class MainPage : ContentPage
+    {
     private bool isConnected = false;
+    private int lastServerIndex = 0;
+    private bool isChangingServerBack = false;
 
     public MainPage()
-    {
-        InitializeComponent();
-        ServerPicker.SelectedIndex = 0;
-    }
+        {
+            InitializeComponent();
+            ServerPicker.SelectedIndex = 0;
+            lastServerIndex = ServerPicker.SelectedIndex;
+        }
 
-    private void ConnectButton_Clicked(object sender, EventArgs e)
+        private async void ConnectButton_Clicked(object sender, EventArgs e)
     {
         if (isConnected == false)
         {
+            ConnectButton.IsEnabled = false;
+            ConnectButton.Text = "Bitte warten...";
+
+            StatusLabel.Text = "Status: Verbindung wird hergestellt...";
+            StatusCircle.Fill = Color.FromArgb("#FFA500");
+            StatusCircle.Stroke = Color.FromArgb("#FFA500");
+
+            IpEntry.Text = "IP-Adresse wird geladen...";
+            ConnectionEntry.Text = "Verbindung wird vorbereitet...";
+
+            await Task.Delay(2000);
+
             isConnected = true;
 
             StatusLabel.Text = "Status: Verbunden";
             StatusCircle.Fill = Color.FromArgb("#008000");
             StatusCircle.Stroke = Color.FromArgb("#008000");
+
             ConnectButton.Text = "Trennen";
 
             IpEntry.Text = GetIpForSelectedServer();
             ConnectionEntry.Text = "Verschlüsselt";
+
+            ConnectButton.IsEnabled = true;
         }
         else
         {
             isConnected = false;
 
             StatusLabel.Text = "Status: Nicht verbunden";
-            StatusCircle.Fill = Color.FromArgb("#B00020");
-            StatusCircle.Stroke = Color.FromArgb("#B00020");
+
             ConnectButton.Text = "Verbinden";
 
             IpEntry.Text = "";
@@ -40,6 +57,26 @@ public partial class MainPage : ContentPage
         }
     }
 
+    private async void ServerPicker_SelectedIndexChanged(object? sender, EventArgs e)
+    {
+        if (isChangingServerBack)
+            return;
+
+        if (isConnected)
+        {
+            await DisplayAlert("Hinweis", "Trenne zuerst alte Verbindung", "OK");
+
+            isChangingServerBack = true;
+            ServerPicker.SelectedIndex = lastServerIndex;
+            isChangingServerBack = false;
+
+            ServerPicker.Title = "Trenne zuerst alte Verbindung";
+        }
+        else
+        {
+            lastServerIndex = ServerPicker.SelectedIndex;
+        }
+    }
     private string GetIpForSelectedServer()
     {
         string selectedServer = ServerPicker.SelectedItem?.ToString() ?? "";

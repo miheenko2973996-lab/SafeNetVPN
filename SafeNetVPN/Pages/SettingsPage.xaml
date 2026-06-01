@@ -149,25 +149,28 @@
         <HorizontalStackLayout Grid.Row="2"
                                HorizontalOptions="Start"
                                BackgroundColor="#FFD6DF"
-                               Padding="20,25"
-                               Spacing="20">
+                               Padding="10,25"
+                               Spacing="10">
 
             <Button Text="Startseite"
                     BackgroundColor="#D0006F"
                     TextColor="White"
                     CornerRadius="10"
+                    FontSize="16"
                     Clicked="GoToMainPage_Clicked" />
 
-            <Button Text="Server"
+            <Button Text="Standartserver"
                     BackgroundColor="#D0006F"
                     TextColor="White"
                     CornerRadius="10" 
+                    FontSize="16"
                     Clicked="GoToServerPage_Clicked" />
 
             <Button Text="Einstellungen"
                     BackgroundColor="#D0006F"
                     TextColor="White"
                     CornerRadius="10"
+                    FontSize="16"
                     Clicked="GoToSettingsPage_Clicked" />
 
         </HorizontalStackLayout>
